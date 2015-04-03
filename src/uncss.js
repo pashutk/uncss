@@ -155,7 +155,7 @@ function process(files, options, pages, stylesheets) {
         parsed, report;
 
     try {
-        parsed = css.parse(cssStr);
+        parsed = css.parse(cssStr, {silent: true});
     } catch (err) {
         /* Try and construct a helpful error message */
         throw utility.parseErrorMessage(err, cssStr);
